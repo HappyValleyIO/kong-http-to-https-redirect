@@ -17,7 +17,7 @@ dependencies = {
 build = {
     type = "builtin",
     modules = {
-    ["kong.plugins.aliyun-http-filter.handler"] = "src/handler.lua",
-    ["kong.plugins.aliyun-http-filter.schema"] = "src/schema.lua",
+    ["kong.plugins.kong-http-to-https-redirect.handler"] = "src/handler.lua",
+    ["kong.plugins.kong-http-to-https-redirect.schema"] = "src/schema.lua",
     }
 }
