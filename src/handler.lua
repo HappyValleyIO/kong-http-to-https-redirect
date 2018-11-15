@@ -3,6 +3,10 @@ local responses = require "kong.tools.responses"
 
 local HttpFilterHandler = BasePlugin:extend()
 
+-- handle redirect after ip-restriction, bot-detection, cors - but before jwt and other authentication plugins
+-- see https://docs.konghq.com/0.14.x/plugin-development/custom-logic/
+HttpFilterHandler.PRIORITY = 1500
+
 function HttpFilterHandler:new()
   HttpFilterHandler.super.new(self, "kong-http-to-https-redirect")
 end
