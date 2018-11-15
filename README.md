@@ -21,6 +21,14 @@ Run kong reload or start and add the plugin as normal.
 ### Docker installation
 We recommend using [kong-docker by dojot](https://github.com/dojot/kong). Copy this repo into the plugins directory of that project and build a custom docker image.
 
+## Info
+
+This plugins priority is set to 1500.
+So it is handled after ip-restriction, bot-detection, cors - but before jwt and other authentication plugins
+(see last paragraph in [Kongo Plugin Documentation - Custom Logic](https://docs.konghq.com/0.14.x/plugin-development/custom-logic/)).
+
+
+
 ## Configuration
 
 * `exclude_uri_pattern`: 
