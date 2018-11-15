@@ -22,7 +22,12 @@ Run kong reload or start and add the plugin as normal.
 We recommend using [kong-docker by dojot](https://github.com/dojot/kong). Copy this repo into the plugins directory of that project and build a custom docker image.
 
 ## Configuration
-As yet, we've had no need for any configuration. Raise an issue if there's anything you'd like to see.
+
+* `exclude_uri_pattern`: 
+    When this value is empty, then a redirect is done in every HTTP (not HTTPS) request.
+    When it is set, then the redirect to https is only done when the called URI doesn't match to the Lua pattern in `exclude_uri_pattern`.
+
+Raise an issue if there's anything more you'd like to see.
 
 ## Misc
 
