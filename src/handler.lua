@@ -4,7 +4,7 @@ local responses = require "kong.tools.responses"
 local HttpFilterHandler = BasePlugin:extend()
 
 function HttpFilterHandler:new()
-  HttpFilterHandler.super.new(self, "http-to-https-redirect")
+  HttpFilterHandler.super.new(self, "kong-http-to-https-redirect")
 end
 
 function HttpFilterHandler:access(conf)

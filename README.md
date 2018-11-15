@@ -13,7 +13,7 @@ Then in the kong.yml add
 
 ```
 custom_plugins:
-  - http-to-https-redirect
+  - kong-http-to-https-redirect
 ```
 
 Run kong reload or start and add the plugin as normal.
